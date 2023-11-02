@@ -19,11 +19,11 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="icoDiego.svg" alt="Logo" width="100" height="54"
+                <a class="navbar-brand" id="logo" href="#" >
+                    <img src="logoEnki.svg" alt="Logo" width="50" height="34"
                         class="d-inline-block align-text-top">
                 </a>
-                <a class="navbar-brand" href="#">Enki Construcciones</a>
+                <a class="navbar-brand" id="textLogo" href="#">Enki Construcciones</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -71,6 +71,24 @@
                 </article>
         </section>
     </main>
+    <script>
+        function actualizarTexto() {
+            var texto = document.getElementById("textLogo");
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                
+                texto.innerText = "Enki";
+            } else {
+                texto.style.color = ""; // Restablecer el color a su valor original
+                texto.innerText = "Enki Constructora"; // Restablecer el texto original
+            }
+        }
+        
+        // Llama a la función al cargar la página y cuando cambie el tamaño de la ventana
+        window.addEventListener('load', actualizarTexto);
+        window.addEventListener('resize', actualizarTexto);
+        
+        
+    </script>
 </body>
 
 </html>
