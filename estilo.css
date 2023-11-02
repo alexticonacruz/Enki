@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(casaFondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.227);
+}
+
+.texto {
+    position: absolute;
+    top: 55%;
+    right: 10px;
+    max-width: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(58, 58, 58);
+    background-color: rgba(240, 248, 255, 0.706);
+}
+
+.texto::before {
+    content: "";
+    position: absolute;
+    top: -270px;
+    left: -280%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(240, 248, 255);
+    filter: blur(55px);
+}
+
+#sala {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(sala.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoSala {
+    text-align: center;
+    max-width: 350px;
+    position: relative;
+    padding: 15px;
+    color: darkcyan;
+    background-color: rgba(240, 248, 255, 0.804);
+    
+}
+
+
+
